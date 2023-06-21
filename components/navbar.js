@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 bg-white shadow-xl`}
+      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 bg-black shadow-xl`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -50,7 +50,7 @@ const Navbar = () => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-primary" : "text-secondary"
+                active === link.title ? "text-white" : "text-white"
               } hover:text-primary text-[18px] font-bold cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
@@ -62,20 +62,20 @@ const Navbar = () => {
           <Image
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
+            className="w-[28px] h-[28px] object-contain cursor-pointer z-20"
             onClick={() => setToggle(!toggle)}
           />
           <div
             className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl bg-primary`}
+              !toggle ? "flex translate-x-[50vw] " : "flex"
+            } transform p-6 black-gradient absolute right-0 top-0 min-w[140px] z-10 bg-black h-screen w-[50vw] transition-transform duration-500`}
           >
-            <ul className="list-none flex justify-end items-start flex-col gap-4">
+            <ul className="list-none flex items-start flex-col gap-4 mt-12">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? "text-white" : "text-secondary"
+                    active === link.title ? "text-white" : "text-white"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setActive(link.title);
