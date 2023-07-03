@@ -10,7 +10,14 @@ module.exports = {
   ],
   mode: "jit",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#F1ECE4",
+        secondary: "#274D99",
+        tertiary: "#EB9EC4",
+        darkPrimary: "#E7E4E1"
+      },
+    },
   },
   plugins: [],
 }

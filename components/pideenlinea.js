@@ -3,11 +3,6 @@ import botellas from "../public/images/botellas.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 
 function PideEnLineaComponent() {
-  const bgStyle = {
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    height: "400px",
-  };
   return (
     <section>
       <div className="flex flex-wrap p-4">

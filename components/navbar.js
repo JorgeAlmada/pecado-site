@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from 'next/image';
-// import logo from "../public/images/logocamperosm.png";
+import logo from "../public/images/pecadologo.png";
 import menu from "../public/images/menu.svg";
 import close from "../public/images/close.svg";
 
@@ -16,7 +16,7 @@ const Navbar = () => {
       title: "Pide en Línea",
     },
     {
-      id: "#menu",
+      id: "#",
       title: "Menú",
     },
     {
@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`sm:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20 bg-black shadow-xl`}
+      className={`md:px-16 px-6 w-full flex items-center py-5 fixed top-0 z-20`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
@@ -43,39 +43,39 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          {/* <Image src={logo} height={100} width={100} alt="logo" className="w-14 h-14 object-contain" /> */}
+          <Image src={logo} alt="logo" className="w-16 h-16 object-contain" />
         </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
+        <ul className="list-none hidden md:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white" : "text-white"
-              } hover:text-primary text-[18px] font-bold cursor-pointer`}
+                active === link.title ? "text-tertiary" : "text-tertiary"
+              } hover:bg-secondary text-[18px] font-bold cursor-pointer bg-darkPrimary rounded-xl px-2 py-0.5`}
               onClick={() => setActive(link.title)}
             >
               <a href={`${link.id}`} target={link.id === "#menu" ? "_self" : "_blank"}>{link.title}</a>
             </li>
           ))}
         </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
+        <div className="md:hidden flex flex-1 justify-end items-center">
           <Image
             src={toggle ? close : menu}
             alt="menu"
-            className="w-[28px] h-[28px] object-contain cursor-pointer z-20"
+            className="w-[28px] h-[28px] object-contain cursor-pointer z-40"
             onClick={() => setToggle(!toggle)}
           />
           <div
             className={`${
               !toggle ? "flex translate-x-[50vw] " : "flex"
-            } transform p-6 black-gradient absolute right-0 top-0 min-w[140px] z-10 bg-black h-screen w-[50vw] transition-transform duration-500`}
+            } transform p-6 black-gradient absolute right-0 top-0 min-w[140px] z-10 bg-primary h-screen w-[50vw] transition-transform duration-500`}
           >
             <ul className="list-none flex items-start flex-col gap-4 mt-12">
               {navLinks.map((link) => (
                 <li
                   key={link.id}
                   className={`${
-                    active === link.title ? "text-white" : "text-white"
+                    active === link.title ? "text-tertiary" : "text-tertiary"
                   } font-poppins font-medium cursor-pointer text-[16px]`}
                   onClick={() => {
                     setActive(link.title);

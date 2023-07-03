@@ -1,35 +1,32 @@
 import React from "react";
-import img1 from "../public/images/leftphoto.jpg";
-import img2 from "../public/images/rightphoto.jpg";
+import Image from "next/image";
+import img1 from "../public/images/pideenlinea.png";
+import img2 from "../public/images/conocenuestromenu.png";
+import worm from "../public/images/pinkworm.png";
+import Link from "next/link";
 
 function MenuComponent() {
-  const bgStyle = {
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    height: "200px",
-  };
   return (
     <section>
-      <div className="flex mb-[30px] flex-wrap">
-        <div className="w-full sm:w-1/3 p-4">
-          <div
-            style={{ backgroundImage: "url(" + img1.src + ")", ...bgStyle }}
-          ></div>
+      <div className="flex flex-wrap overflow-hidden">
+        <div className="md:w-1/2 w-full p-10">
+          <Link href="https://wa.me/c/5216688282808" target="_blank">
+            <Image
+              src={img1}
+              alt="logo"
+              className="object-contain w-2/3 mx-auto"
+            />
+          </Link>
         </div>
-        <div className="w-full sm:w-1/3 flex justify-center">
-          <div className="flex my-auto bg-black px-[4px] rounded-sm">
-          <a
-            href="#"
-            className="mt-auto mb-auto text-2xl font-bold text-white transform-none hover:transform translate-x-2 -translate-y-2 shadow-2xl transition-all"
-          >
-            Conoce nuestro menú
-          </a>
-          </div>
-        </div>
-        <div className="w-full sm:w-1/3 p-4">
-          <div
-            style={{ backgroundImage: "url(" + img2.src + ")", ...bgStyle }}
-          ></div>
+        <div className="md:w-1/2 w-full p-10 relative">
+          <Link href="#" target="_blank">
+            <Image
+              src={img2}
+              alt="logo"
+              className="object-contain w-2/3 mx-auto"
+            />
+          </Link>
+          <Image src={worm} alt="first-worm" className="absolute bottom-10 -right-5 w-[30%] z-20" />
         </div>
       </div>
     </section>

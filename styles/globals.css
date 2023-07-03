@@ -40,3 +40,33 @@ button {
   padding: 0.5rem 1rem;
   font-weight: bold;
 }
+
+/* slider classes and media queries */
+
+.slider {
+  height: 60vw !important;
+}
+
+@media (min-width: 768px) {
+  .slider {
+    height: 60vw !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .slider {
+    height: 60vw !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider {
+    height: 50vw !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .slider {
+    height: 50vw !important;
+  }
+}
