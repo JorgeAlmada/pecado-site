@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="bg-primary">
       <Head>
-        <title>Create Next App</title>
+        <title>El Pecado Café</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
