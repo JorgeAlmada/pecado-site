@@ -1,5 +1,4 @@
 import React from "react";
-import botellas from "../public/images/botellas.jpg";
 import { FaWhatsapp } from "react-icons/fa";
 
 function PideEnLineaComponent() {
