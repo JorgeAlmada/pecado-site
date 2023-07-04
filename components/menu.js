@@ -19,7 +19,7 @@ function MenuComponent() {
           </Link>
         </div>
         <div className="md:w-1/2 w-full p-10 relative">
-          <Link href="#" target="_blank">
+          <Link href="/files/menu.pdf" target="_blank">
             <Image
               src={img2}
               alt="logo"

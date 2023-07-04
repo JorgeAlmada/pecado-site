@@ -16,7 +16,7 @@ const Navbar = () => {
       title: "Pide en Línea",
     },
     {
-      id: "#",
+      id: "/files/menu.pdf",
       title: "Menú",
     },
     {
